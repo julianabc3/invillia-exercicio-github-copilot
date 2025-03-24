@@ -10,6 +10,44 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch("/activities");
       const activities = await response.json();
 
+      // Adicionando atividades esportivas, artísticas e intelectuais
+      activities["Futebol"] = {
+        description: "Jogo de futebol para todas as idades.",
+        schedule: "Sábados às 10h",
+        max_participants: 22,
+        participants: []
+      };
+      activities["Basquete"] = {
+        description: "Partida de basquete para iniciantes.",
+        schedule: "Domingos às 14h",
+        max_participants: 10,
+        participants: []
+      };
+      activities["Pintura"] = {
+        description: "Aula de pintura para iniciantes.",
+        schedule: "Quartas às 16h",
+        max_participants: 15,
+        participants: []
+      };
+      activities["Teatro"] = {
+        description: "Oficina de teatro para todas as idades.",
+        schedule: "Sextas às 18h",
+        max_participants: 20,
+        participants: []
+      };
+      activities["Xadrez"] = {
+        description: "Torneio de xadrez para todos os níveis.",
+        schedule: "Sábados às 9h",
+        max_participants: 16,
+        participants: []
+      };
+      activities["Clube do Livro"] = {
+        description: "Discussão de livros e troca de experiências.",
+        schedule: "Domingos às 17h",
+        max_participants: 25,
+        participants: []
+      };
+
       // Clear loading message
       activitiesList.innerHTML = "";
 
